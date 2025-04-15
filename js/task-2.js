@@ -1,13 +1,10 @@
-// function makeArray(firstArray, secondArray, maxLength) {
-//   const array = [firstArray, secondArray];
-//   if (array.length >= maxLength) {
-//     return array.maxLength;
-//   } else {
-//     return array;
-//   }
-// }
-
-function makeArray(firstArray, secondArray, maxLength) {}
+function makeArray(firstArray, secondArray, maxLength) {
+  const array = firstArray.concat(secondArray);
+  if (array.length > maxLength) {
+    return array.slice(0, maxLength);
+  }
+  return array;
+}
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
 console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4)); // ["Mango", "Poly", "Houston", "Ajax"]
